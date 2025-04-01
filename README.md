@@ -50,6 +50,22 @@ Add the following configuration to the `mcp.json` file in Claude or VSCode:
 }
 ```
 
+## Configure openai Agent
+Add the following configuration in openai Agent:
+
+```python
+from agents.mcp import MCPServerSse
+import asyncio
+
+async with MCPServerSse(
+    name="SSE IDAPro Server",
+    params={
+        "url": "http://127.0.0.1:3000/sse",
+        "type": "sse"
+    }
+) as mcp_server_ida:
+```
+
 ## Usage
 
 1. Open a binary file in IDA Pro
