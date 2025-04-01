@@ -1,4 +1,4 @@
-[English](README.md)|中文)
+[English](README.md)|中文
 
 # IDA Pro MCP 服务端
 
