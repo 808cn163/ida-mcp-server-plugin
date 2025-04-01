@@ -52,6 +52,23 @@ pip install -r requirements.txt
 }
 ```
 
+## 配置 openai Agent / windows
+
+在 openai Agent 中添加以下配置：
+
+```python
+from agents.mcp import MCPServerSse
+import asyncio
+
+async with MCPServerSse(
+    name="SSE IDAPro Server",
+    params={
+        "url": "http://127.0.0.1:3000/sse",
+        "type": "sse"
+    }
+) as mcp_server_ida:
+```
+
 ## 使用方法
 
 1. 在 IDA Pro 中打开一个二进制文件。
